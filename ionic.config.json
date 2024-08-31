@@ -1,0 +1,7 @@
+{
+  "name": "NEW_DRESS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
