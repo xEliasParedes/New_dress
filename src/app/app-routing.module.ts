@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'exploracion',
+    loadChildren: () => import('./pages/exploracion/exploracion.module').then( m => m.ExploracionPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'armario',
+    loadChildren: () => import('./pages/armario/armario.module').then( m => m.ArmarioPageModule)
+  },
 ];
 
 @NgModule({
