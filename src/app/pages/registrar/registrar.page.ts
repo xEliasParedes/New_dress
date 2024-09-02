@@ -12,18 +12,19 @@ export class RegistrarPage implements OnInit {
 
   registrar:any={
     user:"",
-    password:"",
-    email:""
+    email:"",
+    password:""
+
   }
 
-  alertButtons =['registrar()']
+  alertButtons =['registrarse()']
 
   constructor(public router:Router, private alertController: AlertController) { }
 
   ngOnInit() {
   }
 
-  field:string=" "
+  field:string=""
   validarCampo(model:any){
     for(var [key,value] of Object.entries(model)){
       console.log(key)
@@ -47,9 +48,9 @@ export class RegistrarPage implements OnInit {
   }
 
   registrarse(){
-    if(this.validarCampo(this.registrarse)){
+    if(this.validarCampo(this.registrar)){
       let NavigationExtras:NavigationExtras={
-        state:{login: this.registrarse}
+        state:{registrar: this.registrar}
       };
       this.router.navigate(['/login'],NavigationExtras);
     }else{
