@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,56 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  constructor() { }
+  login:any={
+    usuario:"",
+    password:""
+}
+
+  alertButtons = ['ingresar()']
+
+  constructor(public router:Router,private alertController:AlertController) { }
 
   ngOnInit() {
   }
+
+  field:string=""
+  validarCampo(model:any){
+    for(var [key,value] of Object.entries(model)){
+      console.log(key)
+      if(value == ""){
+        this.field = key;
+        return false;
+      }
+    }
+    return true;
+  }
+
+  async presentAlert(titulo:string,sub_titulo:string,mensaje:string) {
+    const alert = await this.alertController.create({
+      header: titulo,
+      subHeader: sub_titulo,
+      message: mensaje,
+      buttons: ['Action'],
+    });
+
+    await alert.present();
+  }
+
+
+
+
+  ingresar(){
+    if(this.validarCampo(this.login)){
+      let NavigationExtras:NavigationExtras={
+        state:{login: this.login}
+      };
+      this.router.navigate(['/home'],NavigationExtras);
+    }else{
+      this.presentAlert("Columnas Vacias", "no puedes iniciar sesion", "el siguiente campo: " + this.field + " esta vacio")
+    }
+    
+  }
+
+  
 
 }

@@ -1,0 +1,65 @@
+ion-content{
+    --background: #D0D5FF; /* Cambia este valor por el color que desees */
+    
+}
+
+
+
+
+.formulario{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 45px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.img_logo{
+    border: solid 10px;
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.formulario h1{
+    color: black;
+    margin: 0;
+    width: 100%;
+    height: 41px;
+    font-size: 16px;
+    position: relative;
+    left: 45px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.formulario #user, #pass{
+    width: 250px;
+    height: 50px;
+    padding: 0px 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    color: black;
+    background-color: azure;
+    
+}
+
+.formulario button{
+    width: 225px;
+    height: 50px;
+    color: white;
+    background: rgb(55, 62, 215);
+    border-radius: 28px;
+    border: 0px;
+}
+
+.formulario a{
+    border-bottom: 2px solid black;
+}
