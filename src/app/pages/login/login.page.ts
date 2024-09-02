@@ -9,6 +9,11 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 
+  login:any={
+    usuario:"",
+    password:""
+}
+
   alertButtons = ['ingresar()']
 
   constructor(public router:Router,private alertController:AlertController) { }
@@ -19,6 +24,7 @@ export class LoginPage implements OnInit {
   field:string=""
   validarCampo(model:any){
     for(var [key,value] of Object.entries(model)){
+      console.log(key)
       if(value == ""){
         this.field = key;
         return false;
@@ -40,10 +46,7 @@ export class LoginPage implements OnInit {
 
 
 
-  login:any={
-    usuario:"",
-    password:""
-  }
+
   ingresar(){
     if(this.validarCampo(this.login)){
       let NavigationExtras:NavigationExtras={
