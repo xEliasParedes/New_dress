@@ -19,17 +19,19 @@
   <form>
     <div class="ion-padding">
     <ion-item>
-      <ion-input placeholder="nombre" class="input"></ion-input>
+      <ion-input placeholder="nombre" class="input" aria-readonly="true"></ion-input>
         <ion-icon name="person-outline"></ion-icon>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="email" class="input"></ion-input>
+      <ion-input placeholder="email" class="input" aria-readonly="true"></ion-input>
         <ion-icon name="person-outline"></ion-icon>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="contraseña" class="input"></ion-input>
+      <ion-input placeholder="contraseña" class="input" aria-readonly="true"></ion-input>
         <ion-icon name="lock-closed-outline"></ion-icon>
     </ion-item>
+
+    <ion-button class="btnRegistrar" fill="outline">Registrar</ion-button>
     
     <div class="singinLink">
       <p>¿Ya tienes una cuenta?<a style="color: blueviolet;" [routerLink]="['/login']">Inicia sesión ahora</a></p>
