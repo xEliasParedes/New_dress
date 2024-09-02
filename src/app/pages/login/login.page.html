@@ -2,8 +2,8 @@
   <div class="formulario">
     <img class="img_logo" src="https://img.freepik.com/vector-gratis/diseno-logo-tienda-ropa-dibujado-mano_23-2149499592.jpg" alt="">
     <h1>Ingresa a tu cuenta</h1>
-    <input type="text" id="user" placeholder="ingrese su Email">
-    <input type="password" name="password" id="pass" placeholder="Ingrese su Contraseña">
+    <input type="text" id="user" placeholder="ingrese su Email" [(ngModel)]="login.usuario">
+    <input type="password" name="password" id="pass" placeholder="Ingrese su Contraseña" [(ngModel)]="login.password">
     <ion-button (click)="ingresar()">INICIAR SESION</ion-button>
     <br>
     <a>registrarse</a>
