@@ -47,9 +47,9 @@ export class RegistrarPage implements OnInit {
   }
 
   registrarse(){
-    if(this.validarCampo(this.registrar)){
+    if(this.validarCampo(this.registrarse)){
       let NavigationExtras:NavigationExtras={
-        state:{login: this.registrar}
+        state:{login: this.registrarse}
       };
       this.router.navigate(['/login'],NavigationExtras);
     }else{
