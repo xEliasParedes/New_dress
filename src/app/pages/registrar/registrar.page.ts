@@ -46,4 +46,16 @@ export class RegistrarPage implements OnInit {
     await alert.present();
   }
 
+  registrarse(){
+    if(this.validarCampo(this.registrar)){
+      let NavigationExtras:NavigationExtras={
+        state:{login: this.registrar}
+      };
+      this.router.navigate(['/login'],NavigationExtras);
+    }else{
+      this.presentAlert("Columnas Vacias", "no puedes iniciar sesion", "el siguiente campo: " + this.field + " esta vacio")
+    }
+    
+  }
+
 }
