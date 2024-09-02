@@ -1,13 +1,40 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>registrar</ion-title>
+  <ion-toolbar style="color: rgb(202, 165, 236);">
+    <ion-title>Registrate en New Dress</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <div class="header">
+  <img width="90%" height="50%" src="assets/img/logo.png" alt="">
+
+
+  
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">registrar</ion-title>
-    </ion-toolbar>
+  <ion-title class="title" size="large">Registrar</ion-title>
+  <p class="sunTitle">Registrate para crear tu cuenta</p>
   </ion-header>
+  </div>
+
+  <form>
+    <div class="ion-padding">
+    <ion-item>
+      <ion-input placeholder="nombre" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="email" class="input"></ion-input>
+        <ion-icon name="person-outline"></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="contraseña" class="input"></ion-input>
+        <ion-icon name="lock-closed-outline"></ion-icon>
+    </ion-item>
+    
+    <div class="singinLink">
+      <p>¿Ya tienes una cuenta?<a style="color: blueviolet;" [routerLink]="['/login']">Inicia sesión ahora</a></p>
+    </div>
+    </div>
+  </form>
+  
 </ion-content>

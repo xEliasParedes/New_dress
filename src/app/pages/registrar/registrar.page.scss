@@ -1,0 +1,51 @@
+
+ion-content::part(background) {
+    background: #da96f5;
+  }
+  
+  ion-content::part(scroll) {
+    color: #fff;
+  }
+
+  .input{
+        font-size: 300;
+  }
+
+  ion-item{
+    --background: #cf7ca6;
+    border-radius: 10px;
+    margin-bottom: 16px;
+  }
+
+  .header{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+    .subTitle{
+        color: gray;
+        font-size: 0.9rem;
+    }
+    title{
+        font-size: 2rem;
+    }
+  }
+
+  .singinLink{
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-content: center;
+    position: absolute;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    right: 0;
+
+    p{
+        font-size: 0.9rem;
+    }
+    a{
+        text-decoration: none;
+    }
+  }
