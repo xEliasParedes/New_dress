@@ -1,0 +1,25 @@
+Instrucciones para uso en terminal.
+
+1- inicia el repositorio local(a veces este comandos ya esta ejecutado, pasar a la instruccion 2)
+--git init 
+
+2- vinculacion del repositorio local con repositorio remoto
+--git remote add origin ["link del repositorio"] 
+
+Despues debe ejecutar "git pull" para traer las branch existentes al vsCode, luego selecciona su branch
+y puede seguir trabajando, y usar las siguientes Instrucciones
+
+PD:en caso de error debe ejecutar [git add .] y [git commit -m "primer pull"]
+   con eso deberia poder ejecuar "git pull".
+
+3- muestra aquellos cambios no confirmados
+--git status 
+
+4- agregar elementos al commit | el primero solo agrega archivo especifico y el segundo todos los archivos modificados
+--git add [nombre del archivo a agregar] o git add .
+
+5- estructura el commit con un mensaje
+--git commit -m "agrege mensaje"
+
+6- subir commit al repositorio remoto
+--git push -u origin [branch]

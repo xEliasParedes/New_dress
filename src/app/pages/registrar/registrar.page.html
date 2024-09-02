@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="color: rgb(202, 165, 236);">
+    <ion-title>Registrate en New Dress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+  <img width="250px" height="250px" src="assets/img/logo.png" alt="">
+
+
+  <ion-header collapse="condense">
+    <ion-title class="title" size="large">Registrar</ion-title>
+    <p class="sunTitle">Registrate para crear tu cuenta</p>
+    </ion-header>
+    </div>
+  
+    <form>
+      <div class="ion-padding">
+      <ion-item>
+        <ion-input placeholder="nombre" class="input" aria-readonly="true" [(ngModel)]="registrar.user"></ion-input>
+          <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="email" class="input" aria-readonly="true" [(ngModel)]="registrar.email"></ion-input>
+          <ion-icon name="person-outline"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="contraseña" class="input" aria-readonly="true" [(ngModel)]="registrar.password"></ion-input>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+      </ion-item>
+
+    <ion-button class="btnRegistrar" fill="outline" (click)="registrar()">Registrar</ion-button>
+    
+    <div class="singinLink">
+      <p>¿Ya tienes una cuenta?<a style="color: blueviolet;" [routerLink]="['/login']">Inicia sesión ahora</a></p>
+    </div>
+    </div>
+  </form>
+  
+</ion-content>
