@@ -11,7 +11,7 @@ import { Action } from 'rxjs/internal/scheduler/Action';
 export class RegistrarPage implements OnInit {
 
   registrar:any={
-    user:"",
+    nombre:"",
     email:"",
     password:""
 
