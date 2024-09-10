@@ -21,6 +21,15 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  validateLogin(){
+    if(this.validarCampo(this.login)){
+      let NavigationExtras : NavigationExtras ={
+        state:{login : this.login}
+      };
+      this.router.navigate(['/home'], NavigationExtras);
+    }
+  }
+
   field:string=""
   validarCampo(model:any){
     for(var [key,value] of Object.entries(model)){

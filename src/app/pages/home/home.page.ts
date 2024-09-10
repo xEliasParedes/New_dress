@@ -1,24 +1,29 @@
-import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
 
-login:any;
-  constructor(public alertController: AlertController,
-              private activedRoute:ActivatedRoute,
-              private router:Router) {
-  this.activedRoute.queryParams.subscribe(params =>{
-    if(this.router.getCurrentNavigation()?.extras?.state){
-      this.login = this.router.getCurrentNavigation()?.extras?.state?.['login'];
-      console.log(this.login);
-    }
-  });
+
+export class HomePage implements OnInit {
+  usuario: string ='';
+
+  constructor(private router:Router) {
+
+      const navigation = this.router.getCurrentNavigation();
+      if(navigation?.extras.state){
+        const state = navigation.extras.state as {login:{ usuario: string; password: string}};
+        this.usuario = state.login.usuario;
+      }
+  }
+
+  ngOnInit() {}
+
 
 }
 }
