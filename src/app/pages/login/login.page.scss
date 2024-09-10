@@ -3,13 +3,13 @@ ion-content{
 
 }
 
-
 .list{
-    background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
-    ion-item {
-      --background: transparent; // Asegura que el fondo sea transparente en temas oscuros o claros
-    }
+  background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
+  ion-item {
+    --background: transparent; // Asegura que el fondo sea transparente en temas oscuros o claros
   }
+}
+
 
 ion-input.custom {
    --background: #6d6d6d94;
