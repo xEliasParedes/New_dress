@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'intro',
     pathMatch: 'full'
   },
   {
@@ -30,9 +30,14 @@ const routes: Routes = [
   {
     path: 'registrar',
     loadChildren: () => import('./pages/registrar/registrar.module').then( m => m.RegistrarPageModule)
-  },  {
+  },
+  {
     path: 'restablecer',
     loadChildren: () => import('./pages/restablecer/restablecer.module').then( m => m.RestablecerPageModule)
+  },
+  {
+    path: 'intro',
+    loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
   },
 
 ];

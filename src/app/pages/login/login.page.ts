@@ -27,6 +27,7 @@ export class LoginPage implements OnInit {
       console.log(key)
       if(value == ""){
         this.field = key;
+        console.log(value)
         return false;
       }
     }
@@ -52,6 +53,7 @@ export class LoginPage implements OnInit {
       let NavigationExtras:NavigationExtras={
         state:{login: this.login}
       };
+      console.log(this.login)
       this.router.navigate(['/home'],NavigationExtras);
     }else{
       this.presentAlert("Columnas Vacias", "no puedes iniciar sesion", "el siguiente campo: " + this.field + " esta vacio")
