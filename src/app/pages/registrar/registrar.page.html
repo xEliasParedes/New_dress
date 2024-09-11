@@ -1,53 +1,49 @@
-<ion-content [fullscreen]="true">
-  <ion-item lines="none" >
-    <img class="img_logo" src="assets/img/Logo.jpeg" alt="">
-  </ion-item>
+<ion-content>
   
-  
-  
-
-  
-  
-    
     <ion-list lines="none" class="list ion-padding">
-      <ion-item>
-        <h4>Registrate para crear tu cuenta</h4>
+      <ion-item lines="none" >
+        <img class="img_logo" src="assets/img/Logo.jpeg" alt="">
       </ion-item>
+      
+      <ion-item lines="none">
+        <h4>Registrate para crear una cuenta</h4>
+      </ion-item>
+      
 
       <ion-list lines="none" class="list">
         <ion-item>
           <ion-input
-          placeholder="nombre" 
+          placeholder="Nombre" 
           class="input"
           fill= "outline"
           aria-readonly="true" 
-          [(ngModel)]="registrar.nombre">
-          <ion-icon name="person-outline"></ion-icon>  
-        </ion-input>
-          
-        </ion-item>
+          [(ngModel)]="registrar.nombre"> 
+          </ion-input>
+          <ion-icon color="primary" name="person-outline"></ion-icon>
+        </ion-item>  
+        
   
         <ion-item>
           <ion-input 
-          placeholder="email"
+          placeholder="Email"
           class="input" aria-readonly="true" 
           fill="outline"
           [(ngModel)]="registrar.email">
-          <ion-icon name="person-outline"></ion-icon>
-          </ion-input>
           
+          </ion-input>
+          <ion-icon color="primary" name="person-outline"></ion-icon>
         </ion-item>
   
         <ion-item>
           <ion-input
           type="password"
-          placeholder="contraseña" 
+          placeholder="Contraseña" 
           class="input" 
           aria-readonly="true" 
           fill= "outline"
           [(ngModel)]="registrar.password">
-          <ion-icon name="lock-closed-outline"></ion-icon>
           </ion-input>
+          <ion-icon color="primary" name="lock-closed-outline"></ion-icon>
           
         </ion-item>
       </ion-list>
