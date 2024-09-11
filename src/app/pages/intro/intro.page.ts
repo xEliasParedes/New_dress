@@ -11,10 +11,12 @@ export class IntroPage implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.router.navigate(['/login']);
-    }, 2500);
-
+   
+ //funcion de espera
+ setTimeout(() => {
+  //cuando se active la pagina, manda al usuario a login, luego de 2,5seg
+  this.router.navigate(['/login']);
+}, 2500);
   }
 
 }

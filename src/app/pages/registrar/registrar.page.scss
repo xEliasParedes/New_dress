@@ -1,58 +1,62 @@
 
-ion-content::part(background) {
-    background: #da96f5;
-  }
+ion-content{
+
+    --background: #ffffff;
+}
   
-  ion-content::part(scroll) {
-    color: #fff;
-  }
 
-  .input{
-        font-size: 300;
-  }
 
-  ion-item{
-    --background: #cf7ca6;
-    border-radius: 10px;
-    margin-bottom: 16px;
-  }
+ion-item{
+  --background: transparent;
 
-  .header{
-    margin-top: 100px;
-    margin-bottom: 80px;
-    text-align: center;
-    .subTitle{
-        color: gray;
-        font-size: 0.9rem;
-    }
-    title{
-        font-size: 2rem;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
+  ion-item {
+    padding: 0;
+    --background: transparent; // Asegura que el fondo sea transparente en temas oscuros o claros
+    ion-input{
+      --padding-start: 23px;
+      --background: #FF5FCF;
+      --border-radius: 20px;
+      margin-bottom: 10px;
+      color: white;
+      font-weight: bold;
     }
   }
+  h4{
+    color: #6B1581;
+    font-size: 15px;
 
-  .btnRegistrar{
-    color: #fff;
-    align-content: center;
-    padding-left: 100px;
-    margin: auto;
   }
+}
 
-  .singinLink{
-    display: flex;
-    margin: auto;
-    flex-direction: row;
-    align-content: center;
-    position: absolute;
-    justify-content: center;
-    left: 0;
-    bottom: 3;
-    width: 1;
-    right: 0;
+.img_logo{
+  border: solid 1px;
+  margin-left: 5px;
+  height: auto;
+  width: auto;
+  border-radius: 100%;
+  max-width: 100%;
+}
 
-    p{
-        font-size: 20px;
-    }
-    a{
-        text-decoration: none;
-    }
-  }
+ion-button{
+  height: 50px;
+  --background: #A970FF;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+p{
+  color: black;
+  font-size: 20px;
+}
+a{
+
+  text-decoration: outline;
+}
