@@ -1,5 +1,5 @@
 ion-content{
-  --background: #D6BD98; /* Cambia este valor por el color que desees */
+  --background: #ffffff; /* Cambia este valor por el color que desees */
 
 }
 .swirl-in-fwd {
@@ -45,6 +45,10 @@ ion-content{
 }
 
 img{
+
+  position: relative;
+  top: 150px;
+
   border: solid 10px;
   margin: 0px;
   justify-content: center;
