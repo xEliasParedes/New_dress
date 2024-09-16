@@ -1,18 +1,30 @@
 ion-content{
+    
     --background: #ffffff
     ; /* Cambia este valor por el color que desees */
     justify-content: center;
     align-items: center;
-    --padding-top: 150px;
+    --padding-top: 0px;
+    --padding-bottom: 60px;
 }
 
 
 ion-item{
-    --background: rgb(248, 192, 255);
+    --background: #ffffff;
     display: flex;
     --padding-start: 23px;
 }
 
+ion-input{
+    --background: pink;
+    color:#ffffff;
+    font-weight: bold;
+}
+
+p{
+    color: pink;
+    font-size: 15px;
+}
 
 ion-list{
     --background: transparent
@@ -23,18 +35,12 @@ ion-list{
     gap: 10px;
 }
 
-ion-button{
-    height: 50px;
-    --background: pink;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-}
+
 
 ion-button{
     height: 50px;
     --background: pink;
-    color: white;
+    color: #FCFFD7;
     font-size: 16px;
     font-weight: bold;
 }
