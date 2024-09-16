@@ -25,7 +25,15 @@ ion-list{
 
 ion-button{
     height: 50px;
-    --background: #A970FF;
+    --background: pink;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+ion-button{
+    height: 50px;
+    --background: pink;
     color: white;
     font-size: 16px;
     font-weight: bold;
