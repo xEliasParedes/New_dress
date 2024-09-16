@@ -1,22 +1,22 @@
 ion-content{
     --background: #ffffff
     ; /* Cambia este valor por el color que desees */
+    justify-content: center;
+    align-items: center;
+    --padding-top: 150px;
+}
 
-}
-ion-content{
-    --background: #ffffff
-    ; /* Cambia este valor por el color que desees */
-    
-}
 
 ion-item{
-    --background: pink;
+    --background: rgb(248, 192, 255);
     display: flex;
+    --padding-start: 23px;
 }
 
 
 ion-list{
-    --background: pink;
+    --background: transparent
+    ;
     display: flex;
     flex-direction: column;
     justify-content: center;
