@@ -17,10 +17,12 @@ ion-item{
 
 ion-input{
     --background: pink;
-    color:#ffffff;
+    color: pink;
     font-weight: bold;
-    --highlight-color-focused: grey; 
-    --placeholder-color: grey;
+    --highlight-color-focused: #ffffff; 
+    --placeholder-color: pink;
+    border-bottom: 0px solid;
+
 }
 
 p{
