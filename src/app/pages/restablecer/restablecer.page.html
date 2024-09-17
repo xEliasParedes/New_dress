@@ -1,6 +1,7 @@
 <ion-content>
+  <img class="img_logo" src="assets/img/Logo.jpeg" alt="">
   <ion-list>
-    <ion-item>
+    <ion-item lines="none">
       <ion-label>Recupera tu cuenta</ion-label>
     </ion-item>
     <ion-list lines="none">
@@ -8,20 +9,20 @@
         <p>Introduce tu correo electrónico para buscar tu cuenta.</p>
       </ion-item>
       <ion-item>
-        <ion-input 
+        <ion-input lines="none"
         class="custom ion-margin-top"
         type="text"
         label="Email" 
         label-placement="floating"
-        fill="outline"
+        fill="solid"
         placeholder="Ingrese su correo" 
         ></ion-input>
       </ion-item>
     </ion-list>
     <ion-button (click)="buscar()" expand="block" fill="solid" shape="round">
-      Buscar
+      Restablecer
     </ion-button>
-    <ion-button [routerLink]="['/login']" color="medium" expand="block" fill="solid" shape="round">
+    <ion-button [routerLink]="['/login']" expand="block" fill="solid" shape="round">
       Cancelar
     </ion-button>
   </ion-list>

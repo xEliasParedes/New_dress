@@ -1,5 +1,49 @@
 ion-content{
+    
     --background: #ffffff
     ; /* Cambia este valor por el color que desees */
+    justify-content: center;
+    align-items: center;
+    --padding-top: 0px;
+    --padding-bottom: 60px;
+}
 
+
+ion-item{
+    --background: #ffffff;
+    display: flex;
+    --padding-start: 23px;
+}
+
+ion-input{
+    --background: pink;
+    color: pink;
+    font-weight: bold;
+    --highlight-color-focused: #ffffff; 
+    --placeholder-color: pink;
+    border-bottom: 0px solid;
+}
+
+p{
+    color: pink;
+    font-size: 15px;
+}
+
+ion-list{
+    --background: transparent
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+ion-button{
+    height: 50px;
+    --background: pink;
+    color: #FCFFD7;
+    font-size: 16px;
+    font-weight: bold;
 }
