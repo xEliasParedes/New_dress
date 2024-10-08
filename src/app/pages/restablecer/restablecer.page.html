@@ -8,18 +8,23 @@
       <ion-item>
         <p>Introduce tu correo electrónico para buscar tu cuenta.</p>
       </ion-item>
+      
       <ion-item>
         <ion-input lines="none"
         class="custom ion-margin-top"
-        type="text"
+        type="email"
         label="Email" 
         label-placement="floating"
         fill="solid"
-        placeholder="Ingrese su correo" 
+        helperText="ingrese un correo valido"
+        errorText="correo invalido"
+        placeholder="Ingrese su correo"
+        [(ngModel)]="restablecer.Email" 
+        email
         ></ion-input>
       </ion-item>
     </ion-list>
-    <ion-button (click)="buscar()" expand="block" fill="solid" shape="round">
+    <ion-button [disabled]="desabilitarBtn()" (click)="buscar()" expand="block" fill="solid" shape="round">
       Restablecer
     </ion-button>
     <ion-button [routerLink]="['/login']" expand="block" fill="solid" shape="round">

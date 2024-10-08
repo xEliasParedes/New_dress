@@ -18,8 +18,10 @@
           fill= "outline"
           aria-readonly="true" 
           [(ngModel)]="registrar.nombre"> 
+          
+          <ion-icon color="dark" slot="start"  name="person-outline"></ion-icon>
           </ion-input>
-          <ion-icon color="primary" name="person-outline"></ion-icon>
+          
         </ion-item>  
         
   
@@ -29,23 +31,25 @@
           class="input" aria-readonly="true" 
           fill="outline"
           [(ngModel)]="registrar.email">
+            <ion-icon color="dark"  slot="start" name="person-outline"></ion-icon>
           
           </ion-input>
-          <ion-icon color="primary" name="person-outline"></ion-icon>
+          
         </ion-item>
   
         <ion-item>
           <ion-input
-          type="password"
+            type="password"
+            placeholder="Contraseña" 
+            class="input" 
+            aria-readonly="true" 
+            fill= "outline"
+            [(ngModel)]="registrar.password">
+            <ion-icon color="dark" slot="start" name="lock-closed-outline"></ion-icon>
 
-          placeholder="Contraseña" 
 
-          class="input" 
-          aria-readonly="true" 
-          fill= "outline"
-          [(ngModel)]="registrar.password">
           </ion-input>
-          <ion-icon color="primary" name="lock-closed-outline"></ion-icon>
+          
           
         </ion-item>
       </ion-list>
