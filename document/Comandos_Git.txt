@@ -1,4 +1,4 @@
-Instrucciones para uso en terminal.
+ Instrucciones para uso en terminal.
 
 1- inicia el repositorio local(a veces este comandos ya esta ejecutado, pasar a la instruccion 2)
 --git init 
