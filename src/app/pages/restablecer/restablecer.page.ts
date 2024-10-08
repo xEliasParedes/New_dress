@@ -20,6 +20,8 @@ export class RestablecerPage implements OnInit {
   ngOnInit() {
   }
 
+
+
   field:string=""
   validarCampo(model:any){
     for(var [key,value] of Object.entries(model)){
@@ -30,6 +32,20 @@ export class RestablecerPage implements OnInit {
       }
     }
     return true;
+  }
+
+  requiredWord: string = '@gmail.com';
+  desabilitarBtn(): boolean{
+    const wordIndex = this.restablecer.Email.indexOf(this.requiredWord);
+
+    // Si la palabra no está en el texto o no hay nada antes de ella
+    if (wordIndex === -1 || wordIndex === 0) {
+      return true;
+    }
+
+    // Verifica si hay algo antes de la palabra (diferente de espacios en blanco)
+    const textBeforeWord = this.restablecer.Email.substring(0, wordIndex).trim();
+    return textBeforeWord === '';
   }
 
   async presentAlert(titulo:string,sub_titulo:string,mensaje:string) {
