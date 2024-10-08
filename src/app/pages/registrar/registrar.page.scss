@@ -24,15 +24,9 @@ h4{
   gap: 10px;
   background-color: rgba(255, 255, 255, 0); // Fondo completamente transparente
   
-  ion-icon{
-    position: absolute;
-    z-index: 10;
-    bottom: 25px;
-    left: 240px;
 
-  }  
   ion-input{
-    padding-right: 10px;
+    
     height: 45px;
     --padding-start: 23px;
     --background: #FF5FCF;
