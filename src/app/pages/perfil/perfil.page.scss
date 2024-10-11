@@ -1,0 +1,21 @@
+.centrar{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.cont_img{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_profile{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+ion-button{
+    font-weight: bold;
+}
