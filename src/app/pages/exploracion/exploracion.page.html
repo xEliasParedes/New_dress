@@ -1,7 +1,10 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Exploracion</ion-title>
-  </ion-toolbar>
+  <ion-searchbar show-clear-button="always" [debounce]="500"  (ionInput)="handleInput($event)" placeholder="Buscar" ></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let result of results.slice(0,3)">
+      <ion-label>{{ result }}</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-header>
 
 <ion-content [fullscreen]="true">
