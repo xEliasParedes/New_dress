@@ -8,9 +8,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage-angular';
 
+
+
+
+import { BarraComponent } from './components/barra/barra.component';
+
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot()],
+  declarations: [AppComponent, BarraComponent],//se añade el componente para ser usado en routing module
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+
+
+
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
