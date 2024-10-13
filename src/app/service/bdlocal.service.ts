@@ -44,7 +44,7 @@ export class BdlocalService {
       this._storage?.set('sesion', this.sesion);
       this.presentToast('Usuario eliminado')
     }else{
-      this.presentToast('El usuario ya existe')
+      this.presentToast('El usuario ya no existe')
     }
    }
 
@@ -52,6 +52,7 @@ export class BdlocalService {
     this._storage?.clear();
     this.sesion = [];
     console.log(this.sesion.length);
+    this.presentToast('La Base de Datos a sido borrada')
    }
 
    async presentToast(mensaje:string){
