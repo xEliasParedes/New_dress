@@ -39,7 +39,7 @@ export class BdlocalService {
 
    eliminarUsuario(nombre: string){
     const existe = this.sesion.find(c => c.strNombre === nombre );
-    if(!existe){
+    if(existe){
       this.sesion = this.sesion.filter(c => c.strNombre !== nombre);
       this._storage?.set('sesion', this.sesion);
       this.presentToast('Usuario eliminado')
