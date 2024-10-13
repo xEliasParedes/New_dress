@@ -1,10 +1,22 @@
-ion-content{
-  background: #ffffff;
+ion-content::part(background) {
+  background: #f8a2ff;
+}
+
+ion-toolbar{
+  --background:#f7b3fd;
+}
+
+ion-title{
+  --color: #ffff;
 }
 
 ion-tabs{
-  background: #ffffff;
+  background: #ffff;
 
+}
+ion-tab-bar{
+  background: #f8a2ff;
+  --color: #f8a2ff;
 }
 
 #container {
