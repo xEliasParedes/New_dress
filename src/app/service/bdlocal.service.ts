@@ -39,12 +39,13 @@ export class BdlocalService {
 
    eliminarUsuario(nombre: string){
     const existe = this.sesion.find(c => c.strNombre === nombre );
-    if(!existe){
+    if(existe){
       this.sesion = this.sesion.filter(c => c.strNombre !== nombre);
       this._storage?.set('sesion', this.sesion);
+      console.log(this.sesion.length);
       this.presentToast('Usuario eliminado')
     }else{
-      this.presentToast('El usuario ya no existe')
+      this.presentToast('El usuario no existe')
     }
    }
 
@@ -52,7 +53,7 @@ export class BdlocalService {
     this._storage?.clear();
     this.sesion = [];
     console.log(this.sesion.length);
-    this.presentToast('La Base de Datos a sido borrada')
+    this.presentToast('La Base de Datos a sido borra')
    }
 
    async presentToast(mensaje:string){
