@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
   //pendiente de logica de acceso
-  token = '';
+  token = 'a'; //agrege algo entre las comillas para permitir el ingreso a las paginas hijos(home, exploracion,armario y perfil)
 
 
   constructor() { }

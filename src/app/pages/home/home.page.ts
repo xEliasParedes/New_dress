@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BdlocalService } from 'src/app/service/bdlocal.service';
+import { BdlocalService } from 'src/app/services/bdlocal.service';
 
 
 
