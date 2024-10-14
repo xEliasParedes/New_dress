@@ -69,7 +69,7 @@ export class LoginPage implements OnInit {
         state:{login: this.login}
       };
       console.log(this.login)
-      this.router.navigate(['/home'],NavigationExtras);
+      this.router.navigate(['home'],NavigationExtras);
     }else{
       //si los campos son vacios, te manda la siguiente alerta
       this.presentAlert("Columnas Vacias", "no puedes iniciar sesion", "el siguiente campo: " + this.field + " esta vacio")
