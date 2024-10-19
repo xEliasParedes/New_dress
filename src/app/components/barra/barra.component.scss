@@ -1,3 +1,18 @@
-ion-tabs{
+ion-tab-button {
+    --background: #F586FF;
+    --background-focused: #000000;
+    --background-focused-opacity: 1;
+    --color: #ffffff;
+    --color-focused: #3880ff;
+    --color-selected: #3f3f3f;
+    --padding-bottom: 4px;
+    --padding-end: 4px;
+    --padding-start: 4px;
+    --padding-top: 4px;
+    --ripple-color: #1e1e1e;
+}
 
+ion-tab-bar {
+    --background: #F586FF;
+    --color: #ffffff;
 }
