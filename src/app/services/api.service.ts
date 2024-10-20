@@ -6,14 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
+  
+  private apiKey: string = '6b384582fa1855beacdec5b6069b82d5';
 
- private apiKey: string = '191a41dd6036d7fb53034bbb8a714c91';
-  private apiUrl: string = 'https://api.openweathermap.org/data/2.5/weather';
-
-  constructor(private http: HttpClient) { }
-
-  getWeather(lat: number, lon: number): Observable<any> {
-    const url = `${this.apiUrl}?lat=${lat}&lon=${lon}&exclude=hourly,daily&appid=${this.apiKey}&units=metric&lang=es`;
+  constructor(private http:HttpClient) { }
+  obtenerTiempoC(lat: number, lon: number): Observable<any> {
+    //estructura para llamar a la api
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${this.apiKey}&units=metric&lang=es`;
+    console.log(url)
     return this.http.get(url);
   }
 }

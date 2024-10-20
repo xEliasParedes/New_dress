@@ -1,15 +1,15 @@
 
 <ion-header [translucent]="true" style="background-color: #ffffff;">
-  <ion-toolbar id="ion-toolbar" style="background-color: #f8a2ff;"> <!-- *ngIf="apiData" -->
+  <ion-toolbar id="ion-toolbar" style="background-color: #f8a2ff;" >
     
       <ion-grid>
         <ion-row>
           <ion-col></ion-col>
           <ion-col></ion-col>
           <ion-col></ion-col>
-          <ion-col>{{ temperature }}°C</ion-col>
-          <ion-col><img src="https://openweathermap.org/img/wn/50n@2x.png" alt="Weather Icon"></ion-col>
-          <ion-col>{{ weatherState }}</ion-col>
+          <ion-col>{{ temperatura }}°C</ion-col>
+          <ion-col><img style="filter: drop-shadow(12px 2px 23px black) invert(15%)" [src]= weatherIconUrl alt="Weather Icon"></ion-col>
+          <ion-col>{{ estado }}</ion-col>
         </ion-row>
       </ion-grid>
     
