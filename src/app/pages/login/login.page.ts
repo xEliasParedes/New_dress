@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { BdlocalService } from 'src/app/services/bdlocal.service';
 
 @Component({
   selector: 'app-login',
@@ -12,11 +13,30 @@ export class LoginPage implements OnInit {
   login:any={
     usuario:"",
     password:""
-}
+  }
+
+  //VARIABLES PERSISTENCIA
+  usuario: string ='';
+  nombre!: string;
+  contrasena!: string;
+  
+  usuarios: any = []; //Atraemos los ususarios desde la Base de Datos.
+
+
   //activa la alerta cuando la funcion se ejecuta
   alertButtons = ['ingresar()']
 
-  constructor(public router:Router ,private alertController:AlertController) { }
+  constructor(public router:Router ,private alertController:AlertController, private bdLocalService: BdlocalService) { }
+
+  //la constante crea un objeto receptor
+  const navigation = this.router.getCurrentNavigation();
+  //si en el objeto hay datos
+    if(navigation?.extras.state){
+    //guarda en state los datos recibidos
+    const state = navigation.extras.state as {login:{ usuario: string; password: string}};
+    //guarda en usuario, los datos de state
+    this.usuario = state.login.usuario;
+  }
 
   ngOnInit() {
   }
@@ -77,7 +97,24 @@ export class LoginPage implements OnInit {
     
   }
   
+  
+  guardarBD(){
+    console.log(this.nombre);
+    console.log(this.contrasena);
+    this.bdLocalService.guardarUsuario(this.nombre, this.contrasena);
+    this.usuarios = this.bdLocalService.mostrarBD();
+    console.log(this.usuarios)
+  }
 
+  eliminarUsuario(){
+    this.bdLocalService.eliminarUsuario(this.nombre);
+    this.usuarios = this.bdLocalService.mostrarBD();
+  }
+
+  borrarBD(){
+    this.bdLocalService.borrarBD();
+    this.usuarios = this.bdLocalService.mostrarBD();
+  }
   
 
 }
