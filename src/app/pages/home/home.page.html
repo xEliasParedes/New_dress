@@ -14,10 +14,6 @@
   
 
 <ion-content>
-
-  
-  
-
-  <ion-toast isOpen="true" message="Bienvenido {{ usuario }}" [duration]="3000" icon="person-circle-outline"></ion-toast>
+  <ion-toast *ngIf="showToast" isOpen="true" message="Bienvenido {{ usuario }}" [duration]="3000" icon="person-circle-outline"></ion-toast>
 </ion-content>
 

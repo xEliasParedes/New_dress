@@ -17,6 +17,7 @@ export class HomePage implements OnInit {
   contrasena!: string;
   
   usuarios: any = []; //Atraemos los ususarios desde la Base de Datos.
+  showToast: boolean = false;
 
   constructor(private router:Router, private bdLocalService: BdlocalService) {
       //la constante crea un objeto receptor
@@ -27,6 +28,9 @@ export class HomePage implements OnInit {
         const state = navigation.extras.state as {login:{ usuario: string; password: string}};
         //guarda en usuario, los datos de state
         this.usuario = state.login.usuario;
+      
+        // Si hay datos de navegación, mostrar el toast
+        this.showToast = true; 
       }
   }
 
@@ -48,7 +52,10 @@ export class HomePage implements OnInit {
     this.usuarios = this.bdLocalService.mostrarBD();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    // Si el usuario recarga la página, no mostrar el toast
+    this.showToast = false;
+  }
 
 
 }
