@@ -57,14 +57,21 @@ const routes: Routes = [
       path: 'armario',
       loadChildren: () => import('./pages/armario/armario.module').then( m => m.ArmarioPageModule)
     },
+    {
+      path: 'carga',
+      loadChildren: () => import('./pages/carga/carga.module').then( m => m.CargaPageModule)
+    },
     
   ],
   },
   //PAGINA NOT FOUND / ERROR 404
   {
     path: '**',
+    component: BarraComponent,
     loadChildren: () => import('./pages/not-found/not-found.module').then( m => m.NotFoundPageModule)
-  }
+  },
+  
+
 
 
 ];

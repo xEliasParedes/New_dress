@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { addIcons } from 'ionicons';
-import { home, search, shirt, person } from 'ionicons/icons';
+import { home, search, shirt, person, aperture } from 'ionicons/icons';
 
 @Component({
   selector: 'app-barra',
@@ -10,7 +10,7 @@ import { home, search, shirt, person } from 'ionicons/icons';
 export class BarraComponent implements OnInit {
 
   constructor() {
-    addIcons({ home, search, shirt, person });
+    addIcons({ home, search, shirt, person, aperture });
   }
 
   ngOnInit() {}
