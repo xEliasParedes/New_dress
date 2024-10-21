@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { BdlocalService } from 'src/app/services/bdlocal.service';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +10,19 @@ import { AlertController } from '@ionic/angular';
 })
 export class LoginPage implements OnInit {
 //modelo para obtener los datos de inicio
-  login:any={
+  login:any = {
     usuario:"",
     password:""
-}
+  }
+  
   //activa la alerta cuando la funcion se ejecuta
   alertButtons = ['ingresar()']
 
-  constructor(public router:Router ,private alertController:AlertController) { }
+  constructor(public router:Router ,
+    private alertController:AlertController,
+    private bdLocalService: BdlocalService) { 
+
+    }
 
   ngOnInit() {
   }
@@ -30,8 +36,10 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/home'], NavigationExtras);
     }
   }
+
   //una variable que representa el campo vacio
-  field:string=""
+  field: string = ""
+  
   //funcion que recibe un modelo cualquiera(login, registro, etc)
   validarCampo(model:any){
     //recorre cada campo y valor del modelo/objeto
@@ -65,6 +73,9 @@ export class LoginPage implements OnInit {
   ingresar(){
     //usa la funcion validar campo con el modelo login, establecido anteriormente
     if(this.validarCampo(this.login)){
+      //guardaremos el usuario y contraseña en la BD
+      this.bdLocalService.guardarUsuario(this.login.usuario, this.login.password);
+      
       let NavigationExtras:NavigationExtras={
         state:{login: this.login}
       };
@@ -76,8 +87,5 @@ export class LoginPage implements OnInit {
     }
     
   }
-  
-
-  
 
 }

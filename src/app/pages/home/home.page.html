@@ -24,24 +24,6 @@
   
 
 <ion-content>
-
-  <ion-card>
-    <ion-input type="text" placeholder="ingrese usuario" [(ngModel)]="nombre"></ion-input>
-    <ion-input type="text" placeholder="ingrese contrasena" [(ngModel)]="contrasena"></ion-input>
-    <ion-button shape="block" (click)="guardarBD()" >Guardar en BD</ion-button>
-    <ion-button shape="block" (click)="eliminarUsuario()" >Eliminar usuario</ion-button>
-    <ion-button shape="block" (click)="borrarBD()" >Borrar la BD</ion-button>
-  </ion-card>
-  <ion-card>
-    
-      
-   
-  </ion-card>
-  
-
-  
-  
-
   <ion-toast isOpen="true" message="Bienvenido {{ usuario }}" [duration]="3000" icon="person-circle-outline"></ion-toast>
 </ion-content>
 
