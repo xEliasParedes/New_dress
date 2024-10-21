@@ -4,6 +4,7 @@ import { BdlocalService } from 'src/app/services/bdlocal.service';
 
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
