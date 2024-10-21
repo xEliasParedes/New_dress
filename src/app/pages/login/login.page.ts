@@ -10,33 +10,19 @@ import { BdlocalService } from 'src/app/services/bdlocal.service';
 })
 export class LoginPage implements OnInit {
 //modelo para obtener los datos de inicio
-  login:any={
+  login:any = {
     usuario:"",
     password:""
   }
-
-  //VARIABLES PERSISTENCIA
-  usuario: string ='';
-  nombre!: string;
-  contrasena!: string;
   
-  usuarios: any = []; //Atraemos los ususarios desde la Base de Datos.
-
-
   //activa la alerta cuando la funcion se ejecuta
   alertButtons = ['ingresar()']
 
-  constructor(public router:Router ,private alertController:AlertController, private bdLocalService: BdlocalService) { }
+  constructor(public router:Router ,
+    private alertController:AlertController,
+    private bdLocalService: BdlocalService) { 
 
-  //la constante crea un objeto receptor
-  const navigation = this.router.getCurrentNavigation();
-  //si en el objeto hay datos
-    if(navigation?.extras.state){
-    //guarda en state los datos recibidos
-    const state = navigation.extras.state as {login:{ usuario: string; password: string}};
-    //guarda en usuario, los datos de state
-    this.usuario = state.login.usuario;
-  }
+    }
 
   ngOnInit() {
   }
@@ -50,8 +36,10 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/home'], NavigationExtras);
     }
   }
+
   //una variable que representa el campo vacio
-  field:string=""
+  field: string = ""
+  
   //funcion que recibe un modelo cualquiera(login, registro, etc)
   validarCampo(model:any){
     //recorre cada campo y valor del modelo/objeto
@@ -85,6 +73,9 @@ export class LoginPage implements OnInit {
   ingresar(){
     //usa la funcion validar campo con el modelo login, establecido anteriormente
     if(this.validarCampo(this.login)){
+      //guardaremos el usuario y contraseña en la BD
+      this.bdLocalService.guardarUsuario(this.login.usuario, this.login.password);
+      
       let NavigationExtras:NavigationExtras={
         state:{login: this.login}
       };
@@ -96,25 +87,5 @@ export class LoginPage implements OnInit {
     }
     
   }
-  
-  
-  guardarBD(){
-    console.log(this.nombre);
-    console.log(this.contrasena);
-    this.bdLocalService.guardarUsuario(this.nombre, this.contrasena);
-    this.usuarios = this.bdLocalService.mostrarBD();
-    console.log(this.usuarios)
-  }
-
-  eliminarUsuario(){
-    this.bdLocalService.eliminarUsuario(this.nombre);
-    this.usuarios = this.bdLocalService.mostrarBD();
-  }
-
-  borrarBD(){
-    this.bdLocalService.borrarBD();
-    this.usuarios = this.bdLocalService.mostrarBD();
-  }
-  
 
 }
