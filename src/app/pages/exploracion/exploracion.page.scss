@@ -1,0 +1,20 @@
+.pins{
+    position: relative;
+    top: 50px;
+    column-count: 2;
+}
+
+.pin{
+    display: inline-block;
+    margin: 0 2px 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.pin:hover{
+    filter: drop-shadow(26px 16px 20px black);
+}
+
+img{
+    border-radius: 10px;
+}
