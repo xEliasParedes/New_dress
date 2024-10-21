@@ -32,6 +32,7 @@ export class HomePage implements OnInit {
   private cacheKey = 'DatosDelTiempo';
   private cacheTimeKey = 'Creacion';
   private cacheDuration = 900;
+  showToast: boolean = false;
 
 
 
@@ -75,6 +76,9 @@ export class HomePage implements OnInit {
   async ngOnInit() {
     //inicio de funcion que obtiene los datos
     await this.imprimirPosicion();
+
+    // Si el usuario recarga la página, no mostrar el toast
+    this.showToast = false;
   }
 
   private async imprimirPosicion() {
